@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Car Price Predicution</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&family=Rubik&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="upper_box">
+            <div class="box_overlay">
+                <div class="img">
+                    <div class="img_overlay">
+
+                    </div>
+                </div>
+                <div class="titlebox">
+                    <p id="p1">Shyam Ranasara</p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main_img">
+            <div class="main_imgoverlay">
+                <div class="sec_nav">
+                    <div class="sec_text">
+                        <h1>Min-Micro Project</h1>
+                        <h3>Old Car Price Predicution</h3>
+                    </div>
+                    <div class="df_from">
+                        <form action="">
+                            <div class="car_name">
+
+                                <label for="Car" class="name">Choose your Car from the list:</label>
+                                <input list="Car" name="car_name" id="car_name" class="name">
+
+                                <datalist id="Car">
+                                    <option value="Maruti Wagon">
+                                    <option value="Hyundai Creta">
+                                    <option value="Honda Jazz">
+                                    <option value="Maruti Ertiga">
+                                    <option value="Audi A4">
+                                    <option value="Hyundai EON">
+                                    <option value="Nissan Micra">
+                                    <option value="Toyota Innova">
+                                    <option value="Volkswagen Vento">
+                                    <option value="Tata Indica">
+                                    <option value="Maruti Ciaz">
+                                    <option value="Honda City">
+                                    <option value="Maruti Swift">
+                                    <option value="Land Rover">
+                                    <option value="Mitsubishi Pajero">
+                                    <option value="Honda Amaze">
+                                    <option value="Renault Duster">
+                                    <option value="Mercedes-Benz New">
+                                    <option value="BMW 3">
+                                    <option value="Maruti S">
+                                    <option value="Audi A6">
+                                    <option value="Hyundai i20">
+                                    <option value="Maruti Alto">
+                                    <option value="Honda WRV">
+                                    <option value="Toyota Corolla">
+                                    <option value="Mahindra Ssangyong">
+                                    <option value="Maruti Vitara">
+                                    <option value="Mahindra KUV">
+                                    <option value="Mercedes-Benz M-Class">
+                                    <option value="Volkswagen Polo">
+                                    <option value="Tata Nano">
+                                    <option value="Hyundai Elantra">
+                                    <option value="Hyundai Xcent">
+                                    <option value="Mahindra Thar">
+                                    <option value="Hyundai Grand">
+                                    <option value="Renault KWID">
+                                    <option value="Hyundai i10">
+                                    <option value="Nissan X-Trail">
+                                    <option value="Maruti Zen">
+                                    <option value="Ford Figo">
+                                    <option value="Porsche Cayenne">
+                                    <option value="Mahindra XUV500">
+                                    <option value="Nissan Terrano">
+                                    <option value="Honda Brio">
+                                    <option value="Ford Fiesta">
+                                    <option value="Tata Zest">
+                                    <option value="Maruti Ritz">
+                                    <option value="BMW 5">
+                                    <option value="Hyundai Santro">
+                                    <option value="Ford Ecosport">
+                                    <option value="Hyundai Verna">
+                                    <option value="Datsun GO">
+                                    <option value="Toyota Fortuner">
+                                    <option value="Maruti Omni">
+                                    <option value="Toyota Etios">
+                                    <option value="Jaguar XF">
+                                    <option value="Maruti Eeco">
+                                    <option value="Honda Civic">
+                                    <option value="Volvo V40">
+                                    <option value="Mercedes-Benz B">
+
+                                </datalist>
+                            </div>
+                            <div class="car_location">
+
+
+                                <label for="Location">Choose your Car Location from the list:</label>
+                                <input list="Car_Location" name="Location" id="Location" class="location">
+                                <datalist id="Car_Location" , class="location">
+                                    <option value="Mumbai">
+                                    <option value="Pune">
+                                    <option value="Chennai">
+                                    <option value="Coimbatore">
+                                    <option value="Hyderabad">
+                                    <option value="Kochi">
+                                    <option value="Kolkata">
+                                    <option value="Delhi">
+                                    <option value="Bangalore">
+                                    <option value="Ahmedabad">
+                                </datalist>
+                            </div>
+
+
+                            <div class="year_div">
+
+                                <label class="year">Model Year:</label>
+                                <input type="number" name="Year" id="Year" class="year">
+                            </div>
+
+
+                            <div class="driven_div">
+
+                                <label class="driven">Kilometer Driven:</label>
+                                <input type="number" name="Driven" id="Driven" class="driven">
+                            </div>
+
+                            <div class="fuel_div">
+
+                                <label for="Fuel" class="fuel">Fuel Type:</label>
+                                <select name="Fuel" id="Fuel" class="fuel">
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Petrol">Petrol</option>
+                                    <option value="CNG">CNG</option>
+                                    <option value="LPG">LPG</option>
+                                </select>
+                            </div>
+
+
+                            <div class="owner_div">
+
+                                <label for="Owner Type" class="owner">Owner Type:</label>
+                                <select name="Owner" id="Owner" class="owner">
+                                    <option value="First">First</option>
+                                    <option value="Secand">Secand</option>
+                                    <option value="Third">Third</option>
+                                    <option value="Fourth and Above">Fourth and Above</option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="transmission_div">
+
+                                <label for="Transmission" class="transmission">Transmission:</label>
+                                <select name="Transmission" id="Transmission" class="transmmission">
+                                    <option value="Manual">Manual</option>
+                                    <option value="Automatic">Automatic</option>
+
+                                </select>
+                            </div>
+
+                            <div class="milage_div">
+
+
+                                <label class="milage">Milage of Your Car:</label>
+                                <input type="number" name="Milage" id="Milage" class="milage">
+                            </div>
+
+
+                            <div class="cc_div">
+
+                                <label class="cc">Engine in CC:</label>
+                                <input type="number" name="cc" id="cc" class="cc">
+                            </div>
+
+
+                            <div class="hp_div">
+
+                                <label class="hp">Power in hp:</label>
+                                <input type="number" name="hp" id="hp" class="hp">
+                            </div>
+
+                            <div class="seats_div">
+
+                                <label class="seats">Seats:</label>
+                                <input type="number" name="Seats" id="Seats" class="seats">
+
+                            </div>
+
+                            <button type="submit">Submit Here
+
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
