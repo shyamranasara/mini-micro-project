@@ -1,0 +1,361 @@
+/* --- Global Font Imports --- */
+/* (We added these in the HTML <head> for reliability) */
+
+/* --- Animation Keyframes --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(52, 211, 153, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Base & Dark Mode Theme --- */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #111827; /* Dark Gray-Blue */
+    color: #e5e7eb; /* Light Gray */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #1f2937; /* Darker Gray-Blue */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2), 0 0 30px rgba(59, 130, 246, 0.1); /* Glow */
+    width: 100%;
+    max-width: 700px; /* Wider for AI layout */
+    border: 1px solid #374151; /* Gray border */
+    animation: fadeIn 0.6s ease-out;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #9ca3af; /* Medium Gray */
+}
+
+/* --- Form Styling (Login/Signup) --- */
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box; 
+    border: 1px solid #4b5563; /* Darker border */
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #374151; /* Dark input */
+    color: #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #3b82f6; /* Blue focus */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #3b82f6; /* Bright Blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex; /* For icons */
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Space between text and icon */
+    transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+button:disabled {
+    background-color: #4b5563;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.error-message {
+    text-align: center;
+    color: #f87171; /* Light Red */
+    font-size: 0.9rem;
+    min-height: 1.2em;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+.switch-form a {
+    color: #60a5fa; /* Light Blue Link */
+    text-decoration: none;
+    font-weight: 600;
+}
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* --- HOMEPAGE "AI CORE" STYLES --- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 1rem;
+}
+
+.header h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Welcome message text */
+#user-display {
+    color: #60a5fa; /* Light Blue */
+    font-weight: 600;
+}
+
+.button-secondary {
+    background-color: transparent;
+    width: auto;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border: 1px solid #4b5563;
+    color: #9ca3af;
+}
+
+.button-secondary:hover:not(:disabled) {
+    background-color: #374151;
+    color: #e5e7eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-title, .results-title {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #e5e7eb;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 1rem;
+}
+
+/* AI Textarea */
+#article-text {
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box; 
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace; /* Monospaced font */
+    font-size: 0.95rem;
+    background-color: #111827; /* Darkest */
+    color: #e5e7eb;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+#article-text:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    outline: none;
+}
+
+#analyze-button {
+    background-color: #10b981; /* Green "Go" button */
+}
+#analyze-button:hover:not(:disabled) {
+    background-color: #059669;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* --- Results Section --- */
+#results-container {
+    margin-top: 2rem;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #111827; /* Darkest background */
+}
+
+/* AI Loader */
+#loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+.pulse-loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulse 1.5s infinite;
+}
+.loading-text {
+    font-family: 'Roboto Mono', monospace;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* Results Grid Layout */
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.result-card {
+    background-color: #1f2937;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    padding: 1.25rem;
+}
+.result-card h4 {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.verdict-card {
+    grid-column: 1 / 2;
+}
+#result-verdict {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.confidence-card {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-card {
+    grid-column: 1 / -1; /* Span full width */
+}
+
+.result-item {
+    margin-bottom: 1rem;
+}
+.result-item:last-child { margin-bottom: 0; }
+.result-item strong {
+    color: #9ca3af;
+    margin-right: 0.5rem;
+}
+#result-bias {
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+/* Explanation Blockquote */
+#result-explanation {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    color: #d1d5db;
+    background: #374151;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    border-left: 4px solid #3b82f6;
+}
+
+/* Verdict Colors */
+.verdict-fake { color: #f87171; /* Light Red */ }
+.vercal-real { color: #34d399; /* Light Green */ }
+.verdict-uncertain { color: #f59e0b; /* Amber */ }
+
+/* Confidence Chart */
+#confidence-chart {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+#result-confidence-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.75rem;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+    color: #e5e7eb;
+}
+.radial-bar-bg {
+    stroke: #374151;
+}
+.radial-bar-progress {
+    stroke: #3b82f6; /* Blue */
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container { padding: 1.5rem; }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .header h2 { font-size: 1.25rem; }
+    .button-secondary { width: 100%; text-align: center; }
+    .results-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+    .verdict-card, .confidence-card {
+        grid-column: auto;
+    }
+}

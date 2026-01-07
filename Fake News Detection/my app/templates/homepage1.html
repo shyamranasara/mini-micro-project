@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header for welcome message and logout -->
+        <div class="header">
+            <h2>Welcome, <span id="user-display">Loading...</span>!</h2>
+            <button id="logout-button" class="button-secondary">Logout</button>
+        </div>
+
+        <hr>
+
+        <!-- Article Analysis Form -->
+        <form id="article-form" class="form">
+            <h3>Fake News Detector</h3>
+            <div class="form-group">
+                <label for="article-text">Paste your article below to analyze it:</label>
+                <!-- This is the square input label you requested -->
+                <textarea id="article-text" rows="15" placeholder="Enter article text here..."></textarea>
+            </div>
+            <button type="submit" id="analyze-button">Analyze Article</button>
+        </form>
+
+        <!-- Results Section -->
+        <div id="results-container" style="display:none;">
+            <h3>Analysis Results</h3>
+            <!-- Loading Spinner -->
+            <div id="loading-spinner" style="display:none;">
+                <div class="spinner"></div>
+                <p>Analyzing... This may take a moment.</p>
+            </div>
+            
+            <!-- Error Message -->
+            <p id="api-error" class="error-message"></p>
+
+            <!-- Success Results -->
+            <div id="results-content" style="display:none;">
+                <div class="result-item">
+                    <strong>Verdict:</strong>
+                    <span id="result-verdict"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Confidence:</strong>
+                    <span id="result-confidence"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Bias:</strong>
+                    <span id="result-bias"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Explanation:</strong>
+                    <p id="result-explanation"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- This MUST be 'module' to use import/export -->
+    <script type="module" src="homepage.js"></script>
+</body>
+</html>
